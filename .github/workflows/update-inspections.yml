@@ -1,0 +1,36 @@
+name: Update Equipment Inspections
+
+on:
+  repository_dispatch:
+    types: [update-inspections]
+
+permissions:
+  contents: write
+
+jobs:
+  update-inspections:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Write inspection data
+        env:
+          INSPECTIONS: ${{ toJson(github.event.client_payload.inspections) }}
+        run: |
+          printf '%s\n' "$INSPECTIONS" > inspections-today.json
+
+      - name: Commit updated inspection data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add inspections-today.json
+
+          if git diff --cached --quiet; then
+            echo "No inspection data changes to commit."
+          else
+            git commit -m "Update today's equipment inspections"
+            git push
+          fi
