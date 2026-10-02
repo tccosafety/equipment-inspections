@@ -1,1 +1,987 @@
-fetch('./inspections-today.json')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HBF Equipment Inspection Status</title>
+
+  <style>
+    :root {
+      --navy: #002855;
+      --navy-light: #063b75;
+      --background: #f3f5f7;
+      --card: #ffffff;
+      --border: #d9dee5;
+      --text: #17212b;
+      --muted: #66727f;
+
+      --pass: #2e7d32;
+      --pass-bg: #e8f5e9;
+
+      --fail: #c62828;
+      --fail-bg: #ffebee;
+
+      --unknown: #616161;
+      --unknown-bg: #eeeeee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: var(--background);
+      color: var(--text);
+    }
+
+    /* -----------------------------
+       Header
+    ----------------------------- */
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 22px 18px;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+    .header-date {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    /* -----------------------------
+       Main content
+    ----------------------------- */
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    /* -----------------------------
+       Summary
+    ----------------------------- */
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .summary-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .summary-number {
+      display: block;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .summary-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+    }
+
+    .summary-pass .summary-number {
+      color: var(--pass);
+    }
+
+    .summary-fail .summary-number {
+      color: var(--fail);
+    }
+
+    /* -----------------------------
+       Contractor sections
+    ----------------------------- */
+
+    .contractor-section {
+      margin-bottom: 25px;
+    }
+
+    .contractor-name {
+      margin: 0 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--navy);
+      font-size: 19px;
+      font-weight: 750;
+      color: var(--navy);
+    }
+
+    /* -----------------------------
+       Equipment cards
+    ----------------------------- */
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fill, minmax(290px, 1fr));
+      gap: 12px;
+    }
+
+    .equipment-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--unknown);
+      border-radius: 9px;
+      padding: 15px 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .equipment-card.pass {
+      border-left-color: var(--pass);
+    }
+
+    .equipment-card.fail {
+      border-left-color: var(--fail);
+    }
+
+    .equipment-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .equipment-type {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .equipment-id {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .equipment-id strong {
+      color: var(--text);
+    }
+
+    /* -----------------------------
+       Status badges
+    ----------------------------- */
+
+    .status {
+      flex-shrink: 0;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .status.pass {
+      color: var(--pass);
+      background: var(--pass-bg);
+    }
+
+    .status.fail {
+      color: var(--fail);
+      background: var(--fail-bg);
+    }
+
+    .status.unknown {
+      color: var(--unknown);
+      background: var(--unknown-bg);
+    }
+
+    /* -----------------------------
+       Empty / loading / error
+    ----------------------------- */
+
+    .message {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .message-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .message-text {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .error {
+      border-left: 5px solid var(--fail);
+    }
+
+    /* -----------------------------
+       Footer
+    ----------------------------- */
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 28px;
+      line-height: 1.6;
+    }
+
+    #lastUpdated {
+      font-weight: 600;
+    }
+
+    /* -----------------------------
+       Mobile
+    ----------------------------- */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 18px 16px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      main {
+        padding: 16px 12px 30px;
+      }
+
+      .summary {
+        gap: 7px;
+      }
+
+      .summary-card {
+        padding: 13px 6px;
+      }
+
+      .summary-number {
+        font-size: 24px;
+      }
+
+      .summary-label {
+        font-size: 10px;
+      }
+
+      .equipment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .equipment-card {
+        padding: 14px;
+      }
+
+      .equipment-type {
+        font-size: 16px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="project-label">
+      Huntington Bank Field
+    </div>
+
+    <h1>
+      Equipment Inspection Status
+    </h1>
+
+    <div
+      class="header-date"
+      id="displayDate">
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- Summary counters -->
+
+  <section
+    class="summary"
+    id="summary"
+    style="display:none;">
+
+    <div class="summary-card">
+      <span
+        class="summary-number"
+        id="totalCount">
+        0
+      </span>
+
+      <span class="summary-label">
+        Inspected
+      </span>
+    </div>
+
+    <div class="summary-card summary-pass">
+      <span
+        class="summary-number"
+        id="passCount">
+        0
+      </span>
+
+      <span class="summary-label">
+        Pass
+      </span>
+    </div>
+
+    <div class="summary-card summary-fail">
+      <span
+        class="summary-number"
+        id="failCount">
+        0
+      </span>
+
+      <span class="summary-label">
+        Fail
+      </span>
+    </div>
+
+  </section>
+
+
+  <!-- Inspection cards get inserted here -->
+
+  <div id="inspectionContainer">
+
+    <div class="message">
+      <div class="message-title">
+        Loading inspection status...
+      </div>
+
+      <div class="message-text">
+        Retrieving today's equipment inspections.
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div>
+      Status reflects inspections submitted for the current calendar date.
+    </div>
+
+    <div>
+      Last refreshed:
+      <span id="lastUpdated">—</span>
+    </div>
+  </footer>
+
+</main>
+
+
+<script>
+
+  /*
+   * --------------------------------------------------------
+   * SETTINGS
+   * --------------------------------------------------------
+   */
+
+  const DATA_FILE = "./inspections-today.json";
+
+  // Refresh every 60 seconds.
+  const REFRESH_INTERVAL = 60000;
+
+
+  /*
+   * --------------------------------------------------------
+   * DATE HELPERS
+   * --------------------------------------------------------
+   */
+
+  function getLocalDateString() {
+
+    const now = new Date();
+
+    const year = now.getFullYear();
+
+    const month =
+      String(now.getMonth() + 1).padStart(2, "0");
+
+    const day =
+      String(now.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  }
+
+
+  function displayCurrentDate() {
+
+    const now = new Date();
+
+    document.getElementById("displayDate").textContent =
+      now.toLocaleDateString(
+        undefined,
+        {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        }
+      );
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * HTML SAFETY
+   * --------------------------------------------------------
+   *
+   * The JSON contains user/form-supplied text such as
+   * Contractor and Equipment ID. Escape those values before
+   * inserting them into HTML.
+   */
+
+  function escapeHtml(value) {
+
+    if (value === null || value === undefined) {
+      return "";
+    }
+
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * NORMALIZE STATUS
+   * --------------------------------------------------------
+   */
+
+  function normalizeStatus(status) {
+
+    const value =
+      String(status || "")
+        .trim()
+        .toLowerCase();
+
+    if (value === "pass") {
+      return "pass";
+    }
+
+    if (value === "fail") {
+      return "fail";
+    }
+
+    return "unknown";
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * REMOVE DUPLICATE EQUIPMENT
+   * --------------------------------------------------------
+   *
+   * The Power Automate JSON is in SharePoint list order.
+   * When the same equipment appears multiple times, later
+   * entries overwrite earlier entries.
+   *
+   * Contractor is included in the key so identical IDs from
+   * different contractors are not accidentally combined.
+   */
+
+  function deduplicateInspections(records) {
+
+    const unique = new Map();
+
+    records.forEach(record => {
+
+      const contractor =
+        record.Contractor || "";
+
+      const type =
+        record.InspectionType || "";
+
+      const id =
+        record.EquipmentID || "";
+
+      const key =
+        `${contractor}|${type}|${id}`;
+
+      unique.set(key, record);
+
+    });
+
+    return Array.from(unique.values());
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * SORT
+   * --------------------------------------------------------
+   */
+
+  function sortInspections(records) {
+
+    return records.sort((a, b) => {
+
+      const contractorA =
+        (a.Contractor || "").toLowerCase();
+
+      const contractorB =
+        (b.Contractor || "").toLowerCase();
+
+      const contractorCompare =
+        contractorA.localeCompare(contractorB);
+
+      if (contractorCompare !== 0) {
+        return contractorCompare;
+      }
+
+
+      const typeA =
+        (a.InspectionType || "").toLowerCase();
+
+      const typeB =
+        (b.InspectionType || "").toLowerCase();
+
+      const typeCompare =
+        typeA.localeCompare(typeB);
+
+      if (typeCompare !== 0) {
+        return typeCompare;
+      }
+
+
+      return String(a.EquipmentID || "")
+        .localeCompare(
+          String(b.EquipmentID || ""),
+          undefined,
+          {
+            numeric: true
+          }
+        );
+
+    });
+
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * BUILD EQUIPMENT CARD
+   * --------------------------------------------------------
+   */
+
+  function createEquipmentCard(record) {
+
+    const status =
+      normalizeStatus(record.OverallStatus);
+
+    let statusText = "Unknown";
+
+    if (status === "pass") {
+      statusText = "Pass";
+    }
+
+    if (status === "fail") {
+      statusText = "Fail";
+    }
+
+
+    const equipmentType =
+      escapeHtml(
+        record.InspectionType ||
+        "Equipment"
+      );
+
+    const equipmentId =
+      escapeHtml(
+        record.EquipmentID ||
+        "Not provided"
+      );
+
+
+    return `
+      <article class="equipment-card ${status}">
+
+        <div class="equipment-top">
+
+          <div>
+
+            <div class="equipment-type">
+              ${equipmentType}
+            </div>
+
+            <div class="equipment-id">
+              Equipment ID:
+              <strong>${equipmentId}</strong>
+            </div>
+
+          </div>
+
+          <span class="status ${status}">
+            ${statusText}
+          </span>
+
+        </div>
+
+      </article>
+    `;
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * RENDER INSPECTIONS
+   * --------------------------------------------------------
+   */
+
+  function renderInspections(records) {
+
+    const container =
+      document.getElementById(
+        "inspectionContainer"
+      );
+
+    const summary =
+      document.getElementById("summary");
+
+
+    /*
+     * Safety check:
+     * Even though Power Automate already filters today's
+     * records, the webpage independently filters the date.
+     *
+     * This prevents yesterday's JSON from displaying after
+     * midnight before the next inspection submission occurs.
+     */
+
+    const today =
+      getLocalDateString();
+
+    let todaysRecords =
+      records.filter(record =>
+        record.Date === today
+      );
+
+
+    /*
+     * Remove duplicate equipment.
+     */
+
+    todaysRecords =
+      deduplicateInspections(
+        todaysRecords
+      );
+
+
+    /*
+     * Sort results.
+     */
+
+    todaysRecords =
+      sortInspections(
+        todaysRecords
+      );
+
+
+    /*
+     * Nothing inspected today.
+     */
+
+    if (todaysRecords.length === 0) {
+
+      summary.style.display = "none";
+
+      container.innerHTML = `
+        <div class="message">
+
+          <div class="message-title">
+            No inspections recorded today
+          </div>
+
+          <div class="message-text">
+            Equipment inspections will appear here
+            after they are submitted.
+          </div>
+
+        </div>
+      `;
+
+      return;
+    }
+
+
+    /*
+     * Summary counters.
+     */
+
+    const passes =
+      todaysRecords.filter(record =>
+        normalizeStatus(
+          record.OverallStatus
+        ) === "pass"
+      ).length;
+
+
+    const failures =
+      todaysRecords.filter(record =>
+        normalizeStatus(
+          record.OverallStatus
+        ) === "fail"
+      ).length;
+
+
+    document.getElementById(
+      "totalCount"
+    ).textContent =
+      todaysRecords.length;
+
+
+    document.getElementById(
+      "passCount"
+    ).textContent =
+      passes;
+
+
+    document.getElementById(
+      "failCount"
+    ).textContent =
+      failures;
+
+
+    summary.style.display = "grid";
+
+
+    /*
+     * Group by contractor.
+     */
+
+    const groups = {};
+
+    todaysRecords.forEach(record => {
+
+      const contractor =
+        record.Contractor ||
+        "Contractor Not Listed";
+
+      if (!groups[contractor]) {
+        groups[contractor] = [];
+      }
+
+      groups[contractor].push(record);
+
+    });
+
+
+    /*
+     * Build contractor sections.
+     */
+
+    let html = "";
+
+    Object.keys(groups)
+      .sort((a, b) =>
+        a.localeCompare(b)
+      )
+      .forEach(contractor => {
+
+        html += `
+          <section class="contractor-section">
+
+            <h2 class="contractor-name">
+              ${escapeHtml(contractor)}
+            </h2>
+
+            <div class="equipment-grid">
+        `;
+
+
+        groups[contractor]
+          .forEach(record => {
+
+            html +=
+              createEquipmentCard(record);
+
+          });
+
+
+        html += `
+            </div>
+          </section>
+        `;
+
+      });
+
+
+    container.innerHTML = html;
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * LOAD JSON
+   * --------------------------------------------------------
+   */
+
+  async function loadInspections() {
+
+    try {
+
+      /*
+       * Cache-busting parameter ensures browsers don't keep
+       * serving an older copy of inspections-today.json.
+       */
+
+      const response =
+        await fetch(
+          `${DATA_FILE}?v=${Date.now()}`,
+          {
+            cache: "no-store"
+          }
+        );
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      if (!Array.isArray(data)) {
+
+        throw new Error(
+          "Inspection data is not an array."
+        );
+
+      }
+
+
+      renderInspections(data);
+
+
+      document.getElementById(
+        "lastUpdated"
+      ).textContent =
+        new Date().toLocaleTimeString(
+          [],
+          {
+            hour: "numeric",
+            minute: "2-digit"
+          }
+        );
+
+
+    } catch (error) {
+
+      console.error(
+        "Unable to load inspections:",
+        error
+      );
+
+
+      document.getElementById(
+        "summary"
+      ).style.display = "none";
+
+
+      document.getElementById(
+        "inspectionContainer"
+      ).innerHTML = `
+        <div class="message error">
+
+          <div class="message-title">
+            Unable to load inspection status
+          </div>
+
+          <div class="message-text">
+            Please refresh the page or try again shortly.
+          </div>
+
+        </div>
+      `;
+
+    }
+
+  }
+
+
+  /*
+   * --------------------------------------------------------
+   * START
+   * --------------------------------------------------------
+   */
+
+  displayCurrentDate();
+
+  loadInspections();
+
+  setInterval(
+    loadInspections,
+    REFRESH_INTERVAL
+  );
+
+</script>
+
+</body>
+</html>
