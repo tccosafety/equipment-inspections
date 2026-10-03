@@ -1,58 +1,9 @@
 [
   {
-    "Contractor": null,
-    "Date": "2026-10-02",
-    "EquipmentID": "103-00005",
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-03",
+    "EquipmentID": "156-12502",
     "InspectionType": "General Equipment Inspection",
     "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": null,
-    "Date": "2026-10-02",
-    "EquipmentID": "124-00010",
-    "InspectionType": "Tracked Excavator Inspection",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": null,
-    "Date": "2026-10-02",
-    "EquipmentID": "124-03683",
-    "InspectionType": "Tracked Excavator Inspection",
-    "OverallStatus": "Fail"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-02",
-    "EquipmentID": "4",
-    "InspectionType": "Polaris Pro XD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-02",
-    "EquipmentID": "4",
-    "InspectionType": "Polaris Pro XD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-02",
-    "EquipmentID": "4",
-    "InspectionType": "Polaris Pro XD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-02",
-    "EquipmentID": "4",
-    "InspectionType": "Polaris Pro XD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-02",
-    "EquipmentID": "2",
-    "InspectionType": "Polaris Pro XD",
-    "OverallStatus": "Fail"
   }
 ]
