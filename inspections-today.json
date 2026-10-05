@@ -68,5 +68,12 @@
     "EquipmentID": "13604560",
     "InspectionType": "General Equipment Inspection",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-05",
+    "EquipmentID": "124-00008",
+    "InspectionType": "General Equipment Inspection",
+    "OverallStatus": "Pass"
   }
 ]
