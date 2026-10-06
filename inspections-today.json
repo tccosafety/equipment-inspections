@@ -124,5 +124,14 @@
     "Make": "CAT",
     "Model": "Water Truck Scrapper",
     "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-06",
+    "EquipmentID": "134-00005",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "740 Artic Dump",
+    "OverallStatus": "Pass"
   }
 ]
