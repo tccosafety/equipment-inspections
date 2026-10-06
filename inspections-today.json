@@ -31,8 +31,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "103-00004",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "D6",
     "OverallStatus": "Pass"
   },
   {
@@ -40,8 +40,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "136-02602",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "775",
     "OverallStatus": "Pass"
   },
   {
@@ -49,8 +49,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "136-04560",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "7763E",
     "OverallStatus": "Pass"
   },
   {
@@ -58,8 +58,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "134-02601",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "745",
     "OverallStatus": "Pass"
   },
   {
@@ -76,17 +76,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "10600001",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-06",
-    "EquipmentID": "134-02602",
-    "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "D9",
     "OverallStatus": "Pass"
   },
   {
@@ -94,17 +85,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "134-04435",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-06",
-    "EquipmentID": "134-04435",
-    "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "Articulated",
     "OverallStatus": "Pass"
   },
   {
@@ -112,8 +94,8 @@
     "Date": "2026-10-06",
     "EquipmentID": "134-02602",
     "InspectionType": "General Equipment Inspection",
-    "Make": null,
-    "Model": null,
+    "Make": "CAT",
+    "Model": "745",
     "OverallStatus": "Pass"
   },
   {
@@ -126,12 +108,12 @@
     "OverallStatus": "Pass"
   },
   {
-    "Contractor": "AECOM Hunt Turner",
+    "Contractor": "Independence Excavating",
     "Date": "2026-10-06",
-    "EquipmentID": "3",
-    "InspectionType": "Polaris Pro XD",
-    "Make": "Polaris",
-    "Model": "ProXD",
+    "EquipmentID": "156-12502",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "jD",
+    "Model": "7920 Tractor",
     "OverallStatus": "Pass"
   }
 ]
