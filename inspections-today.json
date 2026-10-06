@@ -115,5 +115,14 @@
     "Make": "jD",
     "Model": "7920 Tractor",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-06",
+    "EquipmentID": "193-00001",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "Water Truck Scrapper",
+    "OverallStatus": "Fail"
   }
 ]
