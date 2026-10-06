@@ -186,20 +186,27 @@
       gap: 12px;
     }
 
+    .equipment-details {
+      min-width: 0;
+    }
+
     .equipment-type {
       font-size: 17px;
       font-weight: 700;
       line-height: 1.25;
+      margin-bottom: 8px;
     }
 
-    .equipment-id {
-      margin-top: 7px;
+    .equipment-detail {
+      margin-top: 4px;
       color: var(--muted);
       font-size: 14px;
+      line-height: 1.35;
     }
 
-    .equipment-id strong {
+    .equipment-detail strong {
       color: var(--text);
+      font-weight: 600;
     }
 
     /* -----------------------------
@@ -482,10 +489,6 @@
    * --------------------------------------------------------
    * HTML SAFETY
    * --------------------------------------------------------
-   *
-   * The JSON contains user/form-supplied text such as
-   * Contractor and Equipment ID. Escape those values before
-   * inserting them into HTML.
    */
 
   function escapeHtml(value) {
@@ -533,12 +536,8 @@
    * REMOVE DUPLICATE EQUIPMENT
    * --------------------------------------------------------
    *
-   * The Power Automate JSON is in SharePoint list order.
-   * When the same equipment appears multiple times, later
-   * entries overwrite earlier entries.
-   *
-   * Contractor is included in the key so identical IDs from
-   * different contractors are not accidentally combined.
+   * Later records overwrite earlier records for the same
+   * Contractor + Inspection Type + Equipment ID.
    */
 
   function deduplicateInspections(records) {
@@ -647,6 +646,18 @@
         "Equipment"
       );
 
+    const equipmentMake =
+      escapeHtml(
+        record.Make ||
+        "Not provided"
+      );
+
+    const equipmentModel =
+      escapeHtml(
+        record.Model ||
+        "Not provided"
+      );
+
     const equipmentId =
       escapeHtml(
         record.EquipmentID ||
@@ -659,13 +670,23 @@
 
         <div class="equipment-top">
 
-          <div>
+          <div class="equipment-details">
 
             <div class="equipment-type">
               ${equipmentType}
             </div>
 
-            <div class="equipment-id">
+            <div class="equipment-detail">
+              Make:
+              <strong>${equipmentMake}</strong>
+            </div>
+
+            <div class="equipment-detail">
+              Model:
+              <strong>${equipmentModel}</strong>
+            </div>
+
+            <div class="equipment-detail">
               Equipment ID:
               <strong>${equipmentId}</strong>
             </div>
@@ -701,12 +722,9 @@
 
 
     /*
-     * Safety check:
-     * Even though Power Automate already filters today's
-     * records, the webpage independently filters the date.
-     *
-     * This prevents yesterday's JSON from displaying after
-     * midnight before the next inspection submission occurs.
+     * Independently check today's date so yesterday's JSON
+     * will not display after midnight while waiting for a
+     * new Power Automate/GitHub update.
      */
 
     const today =
