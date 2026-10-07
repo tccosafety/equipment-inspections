@@ -422,9 +422,11 @@
     <div>
       Status reflects inspections submitted for the current calendar date.
     </div>
-
     <div>
-      Last refreshed:
+      Dashboard data updates approximately every 5 minutes.
+    </div>  
+    <div>
+      Last Checked:
       <span id="lastUpdated">—</span>
     </div>
   </footer>
@@ -442,8 +444,8 @@
 
   const DATA_FILE = "./inspections-today.json";
 
-  // Refresh every 60 seconds.
-  const REFRESH_INTERVAL = 60000;
+  // Refresh every 5 minutes.
+  const REFRESH_INTERVAL = 300000;
 
 
   /*
