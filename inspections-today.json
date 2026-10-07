@@ -34,5 +34,14 @@
     "Make": "Cat",
     "Model": "D6",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "AECOM Hunt Turner",
+    "Date": "2026-10-07",
+    "EquipmentID": "3",
+    "InspectionType": "Polaris Pro XD",
+    "Make": "Polaris",
+    "Model": "ProXD",
+    "OverallStatus": "Pass"
   }
 ]
