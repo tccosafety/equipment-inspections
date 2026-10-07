@@ -70,5 +70,14 @@
     "Make": "Caterpillar",
     "Model": "352",
     "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-07",
+    "EquipmentID": "156-02235",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Tractor",
+    "Model": "John Deere",
+    "OverallStatus": "Pass"
   }
 ]
