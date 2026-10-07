@@ -52,5 +52,14 @@
     "Make": "Cat",
     "Model": "773E",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-07",
+    "EquipmentID": "136-04562",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "773E",
+    "OverallStatus": "Pass"
   }
 ]
