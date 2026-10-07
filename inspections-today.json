@@ -21,6 +21,16 @@
   {
     "Contractor": "AECOM Hunt Turner",
     "Date": "2026-10-07",
+    "EquipmentID": "5",
+    "InspectionTime": "2026-10-07T15:04:14Z",
+    "InspectionType": "Polaris Pro XD",
+    "Make": "Polaris",
+    "Model": "ProXD",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "AECOM Hunt Turner",
+    "Date": "2026-10-07",
     "EquipmentID": "6",
     "InspectionTime": "2026-10-07T14:56:47Z",
     "InspectionType": "Polaris Pro XD",
