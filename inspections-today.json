@@ -43,5 +43,14 @@
     "Make": "Polaris",
     "Model": "ProXD",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-07",
+    "EquipmentID": "136-04560",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "773E",
+    "OverallStatus": "Pass"
   }
 ]
