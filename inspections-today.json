@@ -79,5 +79,14 @@
     "Make": "Tractor",
     "Model": "John Deere",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-07",
+    "EquipmentID": "140-06266",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "Cs56",
+    "OverallStatus": "Pass"
   }
 ]
