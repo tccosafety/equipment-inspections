@@ -27,36 +27,67 @@ jobs:
           import json
           import os
           from pathlib import Path
+          from datetime import datetime, timezone
 
           path = Path("inspections-today.json")
 
           inspection = json.loads(os.environ["INSPECTION"])
 
           inspection_date = inspection.get("Date", "")
-          contractor = inspection.get("Contractor", "")
-          inspection_type = inspection.get("InspectionType", "")
           equipment_id = inspection.get("EquipmentID", "")
 
-          # Read the existing file if it exists.
+          # --------------------------------------------------
+          # Timestamp helper
+          # --------------------------------------------------
+
+          def parse_time(value):
+              if not value:
+                  return datetime.min.replace(tzinfo=timezone.utc)
+
+              try:
+                  return datetime.fromisoformat(
+                      str(value).replace("Z", "+00:00")
+                  )
+              except (ValueError, TypeError):
+                  return datetime.min.replace(tzinfo=timezone.utc)
+
+          incoming_time = parse_time(
+              inspection.get("InspectionTime", "")
+          )
+
+          # --------------------------------------------------
+          # Read existing JSON
+          # --------------------------------------------------
+
           try:
-              existing = json.loads(path.read_text(encoding="utf-8"))
+              existing = json.loads(
+                  path.read_text(encoding="utf-8")
+              )
+
               if not isinstance(existing, list):
                   existing = []
+
           except (FileNotFoundError, json.JSONDecodeError):
               existing = []
 
-          # Remove records from previous calendar dates.
+          # --------------------------------------------------
+          # Keep only the incoming inspection's calendar date
+          # --------------------------------------------------
+
           existing = [
               record
               for record in existing
               if record.get("Date") == inspection_date
           ]
 
-          # Define equipment identity.
+          # --------------------------------------------------
+          # Equipment identity
+          # --------------------------------------------------
           #
-          # Contractor + Inspection Type + Equipment ID are used
-          # so identical equipment IDs belonging to different
-          # contractors/types are not accidentally combined.
+          # Contractor + Inspection Type + Equipment ID
+          # uniquely identify a dashboard equipment record.
+          # --------------------------------------------------
+
           def equipment_key(record):
               return (
                   str(record.get("Contractor", "")),
@@ -66,33 +97,103 @@ jobs:
 
           new_key = equipment_key(inspection)
 
-          # Remove the previous status for this equipment.
-          existing = [
-              record
-              for record in existing
-              if equipment_key(record) != new_key
-          ]
+          matching_record = None
 
-          # Add the newest inspection.
-          existing.append(inspection)
+          for record in existing:
+              if equipment_key(record) == new_key:
+                  matching_record = record
+                  break
 
-          # Sort for predictable output.
+          # --------------------------------------------------
+          # Protect against out-of-order events
+          # --------------------------------------------------
+
+          should_update = True
+
+          if matching_record is not None:
+
+              existing_time = parse_time(
+                  matching_record.get("InspectionTime", "")
+              )
+
+              if existing_time > incoming_time:
+                  should_update = False
+
+                  print(
+                      "Incoming inspection is older than "
+                      "the current equipment status."
+                  )
+
+                  print(
+                      f"Existing: {existing_time.isoformat()}"
+                  )
+
+                  print(
+                      f"Incoming: {incoming_time.isoformat()}"
+                  )
+
+          # --------------------------------------------------
+          # Update only when incoming record is newest
+          # --------------------------------------------------
+
+          if should_update:
+
+              existing = [
+                  record
+                  for record in existing
+                  if equipment_key(record) != new_key
+              ]
+
+              existing.append(inspection)
+
+              print(
+                  f"Updated equipment {equipment_id}"
+              )
+
+          else:
+
+              print(
+                  f"Skipped older inspection for "
+                  f"equipment {equipment_id}"
+              )
+
+          # --------------------------------------------------
+          # Sort output
+          # --------------------------------------------------
+
           existing.sort(
               key=lambda record: (
-                  str(record.get("Contractor", "")).lower(),
-                  str(record.get("InspectionType", "")).lower(),
-                  str(record.get("EquipmentID", "")).lower()
+                  str(
+                      record.get("Contractor", "")
+                  ).lower(),
+
+                  str(
+                      record.get("InspectionType", "")
+                  ).lower(),
+
+                  str(
+                      record.get("EquipmentID", "")
+                  ).lower()
               )
           )
 
-          # Write clean formatted JSON.
+          # --------------------------------------------------
+          # Write JSON
+          # --------------------------------------------------
+
           path.write_text(
-              json.dumps(existing, indent=2, ensure_ascii=False) + "\n",
+              json.dumps(
+                  existing,
+                  indent=2,
+                  ensure_ascii=False
+              ) + "\n",
               encoding="utf-8"
           )
 
-          print(f"Updated {equipment_id}")
-          print(f"Current equipment records: {len(existing)}")
+          print(
+              f"Current equipment records: {len(existing)}"
+          )
+
           PY
 
       - name: Commit updated inspection data
