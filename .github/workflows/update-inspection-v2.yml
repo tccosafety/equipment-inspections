@@ -1,0 +1,110 @@
+name: Update Equipment Inspection V2
+
+on:
+  repository_dispatch:
+    types: [update-inspection-v2]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: equipment-inspection-json
+  cancel-in-progress: false
+
+jobs:
+  update-inspection:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Merge inspection into status file
+        env:
+          INSPECTION: ${{ toJson(github.event.client_payload) }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path("inspections-today.json")
+
+          inspection = json.loads(os.environ["INSPECTION"])
+
+          inspection_date = inspection.get("Date", "")
+          contractor = inspection.get("Contractor", "")
+          inspection_type = inspection.get("InspectionType", "")
+          equipment_id = inspection.get("EquipmentID", "")
+
+          # Read the existing file if it exists.
+          try:
+              existing = json.loads(path.read_text(encoding="utf-8"))
+              if not isinstance(existing, list):
+                  existing = []
+          except (FileNotFoundError, json.JSONDecodeError):
+              existing = []
+
+          # Remove records from previous calendar dates.
+          existing = [
+              record
+              for record in existing
+              if record.get("Date") == inspection_date
+          ]
+
+          # Define equipment identity.
+          #
+          # Contractor + Inspection Type + Equipment ID are used
+          # so identical equipment IDs belonging to different
+          # contractors/types are not accidentally combined.
+          def equipment_key(record):
+              return (
+                  str(record.get("Contractor", "")),
+                  str(record.get("InspectionType", "")),
+                  str(record.get("EquipmentID", ""))
+              )
+
+          new_key = equipment_key(inspection)
+
+          # Remove the previous status for this equipment.
+          existing = [
+              record
+              for record in existing
+              if equipment_key(record) != new_key
+          ]
+
+          # Add the newest inspection.
+          existing.append(inspection)
+
+          # Sort for predictable output.
+          existing.sort(
+              key=lambda record: (
+                  str(record.get("Contractor", "")).lower(),
+                  str(record.get("InspectionType", "")).lower(),
+                  str(record.get("EquipmentID", "")).lower()
+              )
+          )
+
+          # Write clean formatted JSON.
+          path.write_text(
+              json.dumps(existing, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Updated {equipment_id}")
+          print(f"Current equipment records: {len(existing)}")
+          PY
+
+      - name: Commit updated inspection data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add inspections-today.json
+
+          if git diff --cached --quiet; then
+            echo "No inspection data changes to commit."
+          else
+            git commit -m "Update equipment inspection status"
+            git push
+          fi
