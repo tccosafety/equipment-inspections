@@ -1,11 +1,30 @@
 [
   {
+    "Contractor": "AECOM Hunt Turner",
+    "Date": "2026-10-07",
+    "EquipmentID": "2",
+    "InspectionTime": "2026-10-07T14:50:25Z",
+    "InspectionType": "Polaris Pro XD",
+    "Make": "Polaris",
+    "Model": "ProXD",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "AECOM Hunt Turner",
+    "Date": "2026-10-07",
+    "EquipmentID": "3",
+    "InspectionType": "Polaris Pro XD",
+    "Make": "Polaris",
+    "Model": "ProXD",
+    "OverallStatus": "Pass"
+  },
+  {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-07",
-    "EquipmentID": "134-02601",
+    "EquipmentID": "103-00004",
     "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745",
+    "Make": "Cat",
+    "Model": "D6",
     "OverallStatus": "Pass"
   },
   {
@@ -20,28 +39,28 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-07",
-    "EquipmentID": "136-02602",
+    "EquipmentID": "124-03683",
     "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "775",
+    "Make": "Caterpillar",
+    "Model": "352",
+    "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-07",
+    "EquipmentID": "134-02601",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "745",
     "OverallStatus": "Pass"
   },
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-07",
-    "EquipmentID": "103-00004",
+    "EquipmentID": "136-02602",
     "InspectionType": "General Equipment Inspection",
     "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-10-07",
-    "EquipmentID": "3",
-    "InspectionType": "Polaris Pro XD",
-    "Make": "Polaris",
-    "Model": "ProXD",
+    "Model": "775",
     "OverallStatus": "Pass"
   },
   {
@@ -65,11 +84,11 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-07",
-    "EquipmentID": "124-03683",
+    "EquipmentID": "140-06266",
     "InspectionType": "General Equipment Inspection",
-    "Make": "Caterpillar",
-    "Model": "352",
-    "OverallStatus": "Fail"
+    "Make": "Cat",
+    "Model": "Cs56",
+    "OverallStatus": "Pass"
   },
   {
     "Contractor": "Independence Excavating",
@@ -78,15 +97,6 @@
     "InspectionType": "General Equipment Inspection",
     "Make": "Tractor",
     "Model": "John Deere",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-07",
-    "EquipmentID": "140-06266",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "Cs56",
     "OverallStatus": "Pass"
   },
   {
