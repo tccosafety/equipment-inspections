@@ -2,6 +2,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-08",
+    "EquipmentID": "10600001",
+    "InspectionTime": "2026-10-08T10:37:38Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "D9",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-08",
     "EquipmentID": "134-02601",
     "InspectionTime": "2026-10-08T10:15:42Z",
     "InspectionType": "General Equipment Inspection",
