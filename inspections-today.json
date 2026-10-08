@@ -32,6 +32,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-08",
+    "EquipmentID": "124-03683",
+    "InspectionTime": "2026-10-08T10:57:43Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Caterpillar",
+    "Model": "352F",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-08",
     "EquipmentID": "134-02601",
     "InspectionTime": "2026-10-08T10:15:42Z",
     "InspectionType": "General Equipment Inspection",
