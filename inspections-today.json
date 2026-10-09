@@ -12,6 +12,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-09",
+    "EquipmentID": "122-03766",
+    "InspectionTime": "2026-10-09T10:57:39Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Komatsu",
+    "Model": "228",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-09",
     "EquipmentID": "134-00005",
     "InspectionTime": "2026-10-09T10:46:06Z",
     "InspectionType": "General Equipment Inspection",
