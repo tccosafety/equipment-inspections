@@ -48,5 +48,15 @@
     "Make": "CAT",
     "Model": "745",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-12",
+    "EquipmentID": "143-06460",
+    "InspectionTime": "2026-10-12T11:15:50Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "825 compactor",
+    "OverallStatus": "Pass"
   }
 ]
