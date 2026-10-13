@@ -78,5 +78,15 @@
     "Make": "Cat",
     "Model": "825",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-13",
+    "EquipmentID": "124-00008",
+    "InspectionTime": "2026-10-13T11:26:54Z",
+    "InspectionType": "Tracked Excavator Inspection",
+    "Make": "Cat",
+    "Model": "352",
+    "OverallStatus": "Pass"
   }
 ]
