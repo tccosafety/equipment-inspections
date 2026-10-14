@@ -72,6 +72,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-14",
+    "EquipmentID": "140-06266",
+    "InspectionTime": "2026-10-14T14:19:15Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "Cs56",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-14",
     "EquipmentID": "124-03682",
     "InspectionTime": "2026-10-14T11:19:23Z",
     "InspectionType": "Tracked Excavator Inspection",
