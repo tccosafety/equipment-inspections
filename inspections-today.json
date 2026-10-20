@@ -42,6 +42,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-20",
+    "EquipmentID": "134-02602",
+    "InspectionTime": "2026-10-20T11:15:02Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Cat",
+    "Model": "745",
+    "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-20",
     "EquipmentID": "136-02602",
     "InspectionTime": "2026-10-20T10:56:34Z",
     "InspectionType": "General Equipment Inspection",
