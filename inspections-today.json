@@ -1,72 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "03683",
-    "InspectionTime": "2026-10-19T11:17:27Z",
+    "Date": "2026-10-20",
+    "EquipmentID": "136-02602",
+    "InspectionTime": "2026-10-20T10:56:34Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "Cat",
-    "Model": "352",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "103-00004",
-    "InspectionTime": "2026-10-19T11:15:37Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "10600001",
-    "InspectionTime": "2026-10-19T11:12:15Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D 9",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "122-03766",
-    "InspectionTime": "2026-10-19T11:21:13Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Kamotsu",
-    "Model": "228",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "134-02601",
-    "InspectionTime": "2026-10-19T10:55:20Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "134-04430",
-    "InspectionTime": "2026-10-19T11:24:30Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "740",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-19",
-    "EquipmentID": "134-04435",
-    "InspectionTime": "2026-10-19T11:32:53Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "745",
+    "Model": "775",
     "OverallStatus": "Pass"
   }
 ]
