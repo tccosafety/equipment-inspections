@@ -82,6 +82,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-20",
+    "EquipmentID": "136-04562",
+    "InspectionTime": "2026-10-21T10:39:38Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "773e",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-20",
     "EquipmentID": "RTL-10200",
     "InspectionTime": "2026-10-20T11:10:59Z",
     "InspectionType": "General Equipment Inspection",
