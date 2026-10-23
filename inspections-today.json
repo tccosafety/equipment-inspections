@@ -42,6 +42,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-23",
+    "EquipmentID": "460-05265",
+    "InspectionTime": "2026-10-23T11:51:06Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Mack",
+    "Model": "Water truck",
+    "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-23",
     "EquipmentID": "RTL-10202",
     "InspectionTime": "2026-10-23T11:22:28Z",
     "InspectionType": "General Equipment Inspection",
