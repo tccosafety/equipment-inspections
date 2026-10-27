@@ -72,6 +72,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-27",
+    "EquipmentID": "193-00001",
+    "InspectionTime": "2026-10-27T18:38:15Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "Water Wagon",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-27",
     "EquipmentID": "D64133",
     "InspectionTime": "2026-10-27T11:13:04Z",
     "InspectionType": "General Equipment Inspection",
