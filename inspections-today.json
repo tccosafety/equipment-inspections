@@ -32,6 +32,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-10-27",
+    "EquipmentID": "136-04560",
+    "InspectionTime": "2026-10-27T11:24:45Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Haul truck 773",
+    "Model": "Cat 773",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-27",
     "EquipmentID": "136-04562",
     "InspectionTime": "2026-10-27T10:24:30Z",
     "InspectionType": "General Equipment Inspection",
