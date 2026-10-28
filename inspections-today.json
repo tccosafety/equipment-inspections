@@ -1,102 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "103-00004",
-    "InspectionTime": "2026-10-27T11:14:07Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "120-00021",
-    "InspectionTime": "2026-10-27T11:27:05Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "305",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "132-00001",
-    "InspectionTime": "2026-10-27T11:18:53Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Morooka",
-    "Model": "Morooka",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
+    "Date": "2026-10-28",
     "EquipmentID": "134-02501",
-    "InspectionTime": "2026-10-27T18:36:30Z",
+    "InspectionTime": "2026-10-28T10:09:12Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "CAT",
     "Model": "745 Artic Dump",
-    "OverallStatus": "Fail"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "134-04435",
-    "InspectionTime": "2026-10-27T11:23:59Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "740",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "136-04560",
-    "InspectionTime": "2026-10-27T11:24:45Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Haul truck 773",
-    "Model": "Cat 773",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "136-04562",
-    "InspectionTime": "2026-10-27T10:24:30Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "773e",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "193-00001",
-    "InspectionTime": "2026-10-27T18:38:15Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "Water Wagon",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "D64133",
-    "InspectionTime": "2026-10-27T11:13:04Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "740",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-10-27",
-    "EquipmentID": "RTL-10200",
-    "InspectionTime": "2026-10-27T11:12:52Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "745",
     "OverallStatus": "Pass"
   }
 ]
