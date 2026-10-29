@@ -48,5 +48,15 @@
     "Make": "Cat",
     "Model": "740",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-10-29",
+    "EquipmentID": "Rtl-00200",
+    "InspectionTime": "2026-10-29T11:51:33Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Haul truck 740",
+    "Model": "Cat 740",
+    "OverallStatus": "Pass"
   }
 ]
