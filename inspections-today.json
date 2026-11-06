@@ -12,6 +12,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-11-06",
+    "EquipmentID": "132-00001",
+    "InspectionTime": "2026-11-06T12:12:51Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Morooka",
+    "Model": "MST2200VD",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-11-06",
     "EquipmentID": "134-02501",
     "InspectionTime": "2026-11-06T11:28:28Z",
     "InspectionType": "General Equipment Inspection",
