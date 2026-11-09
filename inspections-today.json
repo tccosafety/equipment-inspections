@@ -1,22 +1,12 @@
 [
   {
-    "Contractor": "AECOM Hunt Turner",
-    "Date": "2026-11-07",
-    "EquipmentID": "35",
-    "InspectionTime": "2026-11-07T14:36:41Z",
-    "InspectionType": "Polaris Pro XD",
-    "Make": "Polaris",
-    "Model": "ProXD",
-    "OverallStatus": "Pass"
-  },
-  {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-07",
-    "EquipmentID": "123-00033",
-    "InspectionTime": "2026-11-07T12:12:49Z",
+    "Date": "2026-11-09",
+    "EquipmentID": "RTL-10202",
+    "InspectionTime": "2026-11-09T11:19:12Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "Cat",
-    "Model": "336",
+    "Model": "740",
     "OverallStatus": "Pass"
   }
 ]
