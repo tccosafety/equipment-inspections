@@ -12,6 +12,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-11-17",
+    "EquipmentID": "120-00019",
+    "InspectionTime": "2026-11-17T12:18:32Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Komatsu",
+    "Model": "Pc88",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-11-17",
     "EquipmentID": "RTL-10202",
     "InspectionTime": "2026-11-17T11:26:21Z",
     "InspectionType": "General Equipment Inspection",
