@@ -1,72 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "103-00004",
-    "InspectionTime": "2026-11-16T12:10:45Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Fail"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "105-00002",
-    "InspectionTime": "2026-11-16T12:28:58Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D8",
-    "OverallStatus": "Fail"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "132-00001",
-    "InspectionTime": "2026-11-16T12:17:13Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Morooka",
-    "Model": "MST2200vd",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "134-04431",
-    "InspectionTime": "2026-11-16T12:26:38Z",
+    "Date": "2026-11-17",
+    "EquipmentID": "RTL-10202",
+    "InspectionTime": "2026-11-17T11:26:21Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "Cat",
     "Model": "740",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "134-2501",
-    "InspectionTime": "2026-11-16T11:11:30Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745 Artic Dump",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "RTL-10200",
-    "InspectionTime": "2026-11-16T12:09:32Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-16",
-    "EquipmentID": "RTL-10202",
-    "InspectionTime": "2026-11-16T12:22:03Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Haul truck",
-    "Model": "Cat 740",
-    "OverallStatus": "Pass"
+    "OverallStatus": "Fail"
   }
 ]
