@@ -32,6 +32,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-11-18",
+    "EquipmentID": "12502",
+    "InspectionTime": "2026-11-18T14:34:00Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "John Deere",
+    "Model": "Tractor",
+    "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-11-18",
     "EquipmentID": "134-02501",
     "InspectionTime": "2026-11-18T11:21:58Z",
     "InspectionType": "General Equipment Inspection",
