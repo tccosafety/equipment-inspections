@@ -2,6 +2,16 @@
   {
     "Contractor": "Independence Excavating",
     "Date": "2026-11-19",
+    "EquipmentID": "134-00003",
+    "InspectionTime": "2026-11-19T12:16:00Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "Haul truck",
+    "Model": "Cat 740",
+    "OverallStatus": "Fail"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-11-19",
     "EquipmentID": "RTL-10200",
     "InspectionTime": "2026-11-19T11:50:59Z",
     "InspectionType": "General Equipment Inspection",
