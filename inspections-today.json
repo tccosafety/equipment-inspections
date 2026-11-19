@@ -1,62 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
-    "EquipmentID": "103-00005",
-    "InspectionTime": "2026-11-18T12:12:13Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
-    "EquipmentID": "10600001",
-    "InspectionTime": "2026-11-18T12:17:17Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D9",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
-    "EquipmentID": "120-00019",
-    "InspectionTime": "2026-11-18T12:33:48Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Komatsu",
-    "Model": "Pc88",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
-    "EquipmentID": "12502",
-    "InspectionTime": "2026-11-18T14:34:00Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "John Deere",
-    "Model": "Tractor",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
+    "Date": "2026-11-19",
     "EquipmentID": "134-02501",
-    "InspectionTime": "2026-11-18T11:21:58Z",
+    "InspectionTime": "2026-11-19T11:06:47Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "CAT",
     "Model": "745 Artic Dump",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-18",
-    "EquipmentID": "134-04435",
-    "InspectionTime": "2026-11-18T12:22:04Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "745",
     "OverallStatus": "Pass"
   }
 ]
