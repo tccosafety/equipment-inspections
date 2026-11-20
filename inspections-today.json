@@ -1,82 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "105-00002",
-    "InspectionTime": "2026-11-19T13:28:38Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D8",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "132-00001",
-    "InspectionTime": "2026-11-19T17:35:56Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Morooka",
-    "Model": "MST2200VD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "134-00003",
-    "InspectionTime": "2026-11-19T12:16:00Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Haul truck",
-    "Model": "Cat 740",
-    "OverallStatus": "Fail"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "134-02503",
-    "InspectionTime": "2026-11-19T12:19:04Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "745",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "134-04435",
-    "InspectionTime": "2026-11-19T12:22:04Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "745",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "Cat",
-    "InspectionTime": "2026-11-19T12:16:41Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "D6",
-    "Model": "103-00005",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "RTL-10200",
-    "InspectionTime": "2026-11-19T11:50:59Z",
+    "Date": "2026-11-20",
+    "EquipmentID": "134-02501",
+    "InspectionTime": "2026-11-20T11:20:27Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "CAT",
-    "Model": "745",
+    "Model": "745 Artic Dump",
     "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-19",
-    "EquipmentID": "RTL-10202",
-    "InspectionTime": "2026-11-19T11:51:49Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "740",
-    "OverallStatus": "Fail"
   }
 ]
