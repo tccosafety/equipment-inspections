@@ -1,72 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "103-00005",
-    "InspectionTime": "2026-11-20T12:12:59Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "D6",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "120-00019",
-    "InspectionTime": "2026-11-20T12:15:33Z",
+    "Date": "2026-11-21",
+    "EquipmentID": "122-03766",
+    "InspectionTime": "2026-11-21T11:35:48Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "Komatsu",
-    "Model": "Pc88",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "132-00001",
-    "InspectionTime": "2026-11-20T12:13:22Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Morooka",
-    "Model": "MST2200VD",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "134-02501",
-    "InspectionTime": "2026-11-20T11:20:27Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745 Artic Dump",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "143-06460",
-    "InspectionTime": "2026-11-20T17:21:54Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "825 H",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "2250",
-    "InspectionTime": "2026-11-20T12:43:46Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "John Deere",
-    "Model": "Tractor",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-20",
-    "EquipmentID": "RTL-10200",
-    "InspectionTime": "2026-11-20T11:36:52Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "CAT",
-    "Model": "745",
+    "Model": "Pc228",
     "OverallStatus": "Pass"
   }
 ]
