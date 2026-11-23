@@ -1,32 +1,12 @@
 [
   {
     "Contractor": "Independence Excavating",
-    "Date": "2026-11-21",
-    "EquipmentID": "122-03766",
-    "InspectionTime": "2026-11-21T11:35:48Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Komatsu",
-    "Model": "Pc228",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-21",
-    "EquipmentID": "136-02601",
-    "InspectionTime": "2026-11-21T12:34:15Z",
-    "InspectionType": "General Equipment Inspection",
-    "Make": "Cat",
-    "Model": "775",
-    "OverallStatus": "Pass"
-  },
-  {
-    "Contractor": "Independence Excavating",
-    "Date": "2026-11-21",
-    "EquipmentID": "136-04560",
-    "InspectionTime": "2026-11-21T12:29:55Z",
+    "Date": "2026-11-23",
+    "EquipmentID": "134-02501",
+    "InspectionTime": "2026-11-23T11:10:05Z",
     "InspectionType": "General Equipment Inspection",
     "Make": "CAT",
-    "Model": "773e",
+    "Model": "745 Artic Dump",
     "OverallStatus": "Pass"
   }
 ]
