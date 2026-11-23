@@ -8,5 +8,15 @@
     "Make": "CAT",
     "Model": "745 Artic Dump",
     "OverallStatus": "Pass"
+  },
+  {
+    "Contractor": "Independence Excavating",
+    "Date": "2026-11-23",
+    "EquipmentID": "RTL-10200",
+    "InspectionTime": "2026-11-23T11:17:16Z",
+    "InspectionType": "General Equipment Inspection",
+    "Make": "CAT",
+    "Model": "745",
+    "OverallStatus": "Pass"
   }
 ]
